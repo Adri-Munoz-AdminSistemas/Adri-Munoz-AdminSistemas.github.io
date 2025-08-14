@@ -10,3 +10,15 @@ h1 {
     font-size: 3rem;
     color: #4CAF50;
 }
+
+a.boton {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
