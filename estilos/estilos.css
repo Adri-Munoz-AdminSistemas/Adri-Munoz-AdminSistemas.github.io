@@ -14,16 +14,29 @@
 }
 
 body {
-    background-image: url("../fondo.jpg"); /* Imagen de fondo */
-    background-size: cover;       /* La imagen cubre todo el fondo */
-    background-position: center;  /* Centrada */
-    background-repeat: no-repeat; /* No se repite */
+    /* Fondo con imagen */
+    background-image: url("../fondo.jpg");
+    background-size: cover;        /* Cubrir todo el contenedor */
+    background-position: center;   /* Centrar la imagen */
+    background-repeat: no-repeat;  /* Sin repetición */
     color: var(--texto);
     font-family: 'JetBrains Mono', monospace;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+}
+
+/* Overlay para mejorar legibilidad del texto */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 17, 23, 0.6); /* Capa semi-transparente */
+    z-index: 0;
 }
 
 /* ===== Contenedor principal ===== */
@@ -32,6 +45,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: relative; /* Para que el overlay no tape el contenido */
+    z-index: 1;
 }
 
 /* ===== Botones ===== */
