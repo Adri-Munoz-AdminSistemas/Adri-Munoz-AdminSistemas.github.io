@@ -1,6 +1,5 @@
 /* ===== Paleta de colores ===== */
 :root {
-    --fondo: #0D1117;          /* Fondo principal */
     --texto: #E6EDF3;          /* Texto principal */
     --acento: #2F81F7;         /* Color de botones/enlaces */
     --acento-hover: #58A6FF;   /* Hover de botones */
@@ -15,7 +14,10 @@
 }
 
 body {
-    background-color: var(--fondo);
+    background-image: url("../fondo.jpg"); /* Imagen de fondo */
+    background-size: cover;       /* La imagen cubre todo el fondo */
+    background-position: center;  /* Centrada */
+    background-repeat: no-repeat; /* No se repite */
     color: var(--texto);
     font-family: 'JetBrains Mono', monospace;
     display: flex;
