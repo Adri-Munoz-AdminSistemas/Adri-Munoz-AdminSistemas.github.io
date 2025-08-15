@@ -28,34 +28,16 @@
     </header>
     <main>
         <section class="contenedor sobre-nosotros">
-            <h2 class="titulo">Proyectos
-                <nav>
-                    <form class="search-bar" onsubmit="return false;">
-                        <input type="text" id="searchInput" placeholder="Buscar...">
-                        <button type="button" onclick="buscarTexto()">🔍</button>
-                    </form>
-                </nav>
-            </h2>
-            <h3></h3>
-            <div class="contenedor-sobre-nosotros">
-                <img src="img/ilustracion2.svg" alt="" class="imagen-about-us">
-                <div class="contenido-textos">
-                    <h3><span>1</span>Títulos</h3>
-                    <p>Administración de Sistemas Informáticos en Red (ASIR)</p>
-                    <p>Socorrista Acuático by ENSAP</p>
-                    <p>B1 Cambridge (Inglés)</p>
-                    <br>
-                    <h3><span>2</span>Planes de futuro</h3>
-                    <p>Grado en Computación</p>
-                    <p>Grado en Ingeniería de Computadores</p>
-                    <p>Especialización en Máquinas Virtuales, Seguridad Informática e Inteligencia Artificial</p>
-                    <br>
-                    <h3><span>3</span>Certificaciones</h3>
-                    <p>Google: Inteligencia Artificial y productividad</p>
-                    <p>Cisco: Introducción a la Ciberseguridad</p>
-                </div>
-            </div>
-        </section>
+            <h2 class="titulo">Proyectos</h2>
+            <form class="search-bar" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Buscar proyecto...">
+            </form>
+            <section id="proyectos">
+                <p>Proyecto de balanceo de carga con Nginx y Docker</p>
+                <p>Implementación de VPN con Sophos</p>
+                <p>Servidor de contraseñas con Vaultwarden</p>
+                <p>Monitorización de red con Zabbix</p>
+            </section>
 
     <footer>
         <div class="contenedor-footer">
@@ -70,29 +52,31 @@
         </div>
         <h2 class="titulo-final">Adrián Muñoz</h2>
     </footer>
-        <script>
-        function buscarTexto() {
-            // Limpiar resultados anteriores
-            limpiarResaltado();
+    <script>
+    document.getElementById("searchInput").addEventListener("input", function() {
+        let texto = this.value.trim().toLowerCase();
+        let contenedor = document.getElementById("proyectos");
 
-            let texto = document.getElementById("searchInput").value.trim();
-            if (texto === "") return;
+        // Elimina resaltados previos
+        limpiarResaltado(contenedor);
 
-            // Buscar en el body
-            let contenido = document.body.innerHTML;
-            let regex = new RegExp(`(${texto})`, 'gi');
+        if (texto === "") return;
 
-            // Reemplazar coincidencias por versión resaltada
-            document.body.innerHTML = contenido.replace(regex, '<span class="highlight">$1</span>');
-        }
+        // Busca coincidencias en cada párrafo
+        contenedor.querySelectorAll("p").forEach(parrafo => {
+            let original = parrafo.textContent;
+            let regex = new RegExp(`(${texto})`, "gi");
+            parrafo.innerHTML = original.replace(regex, '<span class="highlight">$1</span>');
+        });
+    });
 
-        function limpiarResaltado() {
-            let resaltados = document.querySelectorAll(".highlight");
-            resaltados.forEach(el => {
-                el.outerHTML = el.innerHTML; // Quita el span y deja solo el texto
-            });
-        }
-        </script>
+    function limpiarResaltado(elemento) {
+        elemento.querySelectorAll(".highlight").forEach(el => {
+            el.outerHTML = el.innerHTML; // Quita el span y deja el texto normal
+        });
+    }
+    </script>
+
 
 </body>
 
