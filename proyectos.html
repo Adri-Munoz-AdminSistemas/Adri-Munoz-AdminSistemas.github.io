@@ -16,12 +16,7 @@
             <a href="index.html">Inicio</a>
             <a href="contacto.html">Contacto</a>
         </nav>
-        <nav>
-            <form class="search-bar" onsubmit="return false;">
-                <input type="text" id="searchInput" placeholder="Buscar...">
-                <button type="button" onclick="buscarTexto()">🔍</button>
-            </form>
-        </nav>
+        
         <section class="textos-header">
             <h1>Proyectos</h1>
         </section>
@@ -33,7 +28,14 @@
     </header>
     <main>
         <section class="contenedor sobre-nosotros">
-            <h2 class="titulo">Proyectos</h2>
+            <h2 class="titulo">Proyectos
+                <nav>
+                    <form class="search-bar" onsubmit="return false;">
+                        <input type="text" id="searchInput" placeholder="Buscar...">
+                        <button type="button" onclick="buscarTexto()">🔍</button>
+                    </form>
+                </nav>
+            </h2>
             <h3></h3>
             <div class="contenedor-sobre-nosotros">
                 <img src="img/ilustracion2.svg" alt="" class="imagen-about-us">
