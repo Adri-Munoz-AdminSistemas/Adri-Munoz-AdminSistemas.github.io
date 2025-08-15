@@ -13,8 +13,14 @@
 <body>
     <header>
         <nav>
-            <a href="proyectos.html">Proyectos</a>
+            <a href="index.html">Inicio</a>
             <a href="contacto.html">Contacto</a>
+        </nav>
+        <nav>
+            <form class="search-bar" onsubmit="return false;">
+                <input type="text" id="searchInput" placeholder="Buscar...">
+                <button type="button" onclick="buscarTexto()">🔍</button>
+            </form>
         </nav>
         <section class="textos-header">
             <h1>Proyectos</h1>
