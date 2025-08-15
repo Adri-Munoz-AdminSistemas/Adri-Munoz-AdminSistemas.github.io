@@ -70,5 +70,29 @@
         </div>
         <h2 class="titulo-final">Adrián Muñoz</h2>
     </footer>
+        <script>
+        function buscarTexto() {
+            // Limpiar resultados anteriores
+            limpiarResaltado();
+
+            let texto = document.getElementById("searchInput").value.trim();
+            if (texto === "") return;
+
+            // Buscar en el body
+            let contenido = document.body.innerHTML;
+            let regex = new RegExp(`(${texto})`, 'gi');
+
+            // Reemplazar coincidencias por versión resaltada
+            document.body.innerHTML = contenido.replace(regex, '<span class="highlight">$1</span>');
+        }
+
+        function limpiarResaltado() {
+            let resaltados = document.querySelectorAll(".highlight");
+            resaltados.forEach(el => {
+                el.outerHTML = el.innerHTML; // Quita el span y deja solo el texto
+            });
+        }
+        </script>
+
 </body>
 
