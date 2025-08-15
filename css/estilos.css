@@ -129,6 +129,16 @@ header nav a:hover {
 
 .nombre-proyecto {
     font-weight: 600;
+    text-decoration: underline;       /* Subrayado */
+    text-decoration-color: #0000FF;   /* Azul */
+    text-underline-offset: 3px;       /* Separación del subrayado */
+    transition: color 0.3s, text-decoration-color 0.3s;
+    cursor: pointer;
+}
+
+.nombre-proyecto:hover {
+    color: #00008B;                    /* Azul más oscuro */
+    text-decoration-color: #00008B;    /* Subrayado azul oscuro */
 }
 
 /* Barra de búsqueda */
