@@ -82,33 +82,24 @@
     </footer>
 
     <script>
-        // Escapa caracteres especiales para usar el texto del usuario en un RegExp seguro
-        function escapeRegExp(s) {
-            return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        }
+    document.addEventListener('DOMContentLoaded', () => {
+        const input = document.getElementById('searchInput');
+        const items = Array.from(document.querySelectorAll('#proyectos p'));
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const input = document.getElementById('searchInput');
-            const contenedor = document.getElementById('proyectos');
+        input.addEventListener('input', () => {
+            const q = input.value.trim().toLowerCase();
 
-            // Guardamos el HTML original de cada párrafo para restaurarlo en cada nueva búsqueda
-            const items = Array.from(contenedor.querySelectorAll('p'));
-            items.forEach(p => { p.dataset.original = p.innerHTML; });
-
-            input.addEventListener('input', () => {
-                const q = input.value.trim();
-                // Restaurar contenido original antes de resaltar de nuevo
-                items.forEach(p => { p.innerHTML = p.dataset.original; });
-
-                if (!q) return;
-
-                const regex = new RegExp(escapeRegExp(q), 'gi');
-
-                items.forEach(p => {
-                    p.innerHTML = p.innerHTML.replace(regex, (m) => `<span class="highlight">${m}</span>`);
-                });
+            items.forEach(p => {
+                const texto = p.textContent.toLowerCase();
+                // Mostrar solo si el texto contiene la búsqueda
+                if (texto.includes(q) || q === "") {
+                    p.style.display = "";
+                } else {
+                    p.style.display = "none";
+                }
             });
         });
+    });
     </script>
 </body>
 </html>
