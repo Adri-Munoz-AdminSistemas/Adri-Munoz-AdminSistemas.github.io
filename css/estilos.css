@@ -287,18 +287,20 @@ footer{
 }
 
 /* Subrayado y cambio de color de nombres de proyecto */
+/* Subrayado y cambio de color de nombres de proyecto */
 .nombre-proyecto {
-    text-decoration: underline;
-    text-decoration-color: #0000FF; /* Azul */
-    text-underline-offset: 3px;     /* Separación del subrayado */
+    text-decoration: none; /* Elimina el subrayado por defecto */
+    color: #000; /* Color por defecto (negro) */
     transition: color 0.3s, text-decoration-color 0.3s;
     cursor: pointer;
 }
 
 .nombre-proyecto:hover {
-    color: #00008B;                 /* Azul más oscuro */
-    text-decoration-color: #00008B; /* Subrayado azul oscuro */
+    color: #00BFFF; /* Azul claro al pasar el ratón */
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+    text-decoration-color: #00BFFF; /* Azul claro en el subrayado */
 }
+
 
 @media screen and (max-width:900px){
     header{
