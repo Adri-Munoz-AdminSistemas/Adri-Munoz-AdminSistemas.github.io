@@ -8,6 +8,26 @@
     <title>Portfolio Adrián Muñoz</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    <style>
+        /* Asegura que el resaltado se vea aunque no esté en tu CSS externo */
+        .highlight { background: yellow; color: #000; font-weight: bold; }
+
+        /* Estilo sencillo para la barra de búsqueda bajo el título */
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0 10px;
+        }
+        .search-bar input {
+            border: 2px solid #ccc;
+            padding: 8px 12px;
+            border-radius: 20px;
+            width: 320px;
+            font-size: 14px;
+            outline: none;
+        }
+        .search-bar input:focus { border-color: #642a73; }
+    </style>
 </head>
 
 <body>
@@ -39,20 +59,13 @@
 
             <!-- Contenido donde se buscará y resaltará -->
             <section id="proyectos" class="contenedor-proyectos">
-                <div class="proyecto">
-                    <p><span class="nombre-proyecto">Proyecto de balanceo de carga con Nginx y Docker</span></p>
-                </div>
-                <div class="proyecto">
-                    <p><span class="nombre-proyecto">Implementación de VPN con Sophos</span></p>
-                </div>
-                <div class="proyecto">
-                    <p><span class="nombre-proyecto">Servidor de contraseñas con Vaultwarden</span></p>
-                </div>
-                <div class="proyecto">
-                    <p><span class="nombre-proyecto">Monitorización de red con Zabbix</span></p>
-                </div>
+                <div class="proyecto"><p><span class="nombre-proyecto">Proyecto de balanceo de carga con Nginx y Docker</span></p></div>
+                <div class="proyecto"><p><span class="nombre-proyecto">Implementación de VPN con Sophos</span></p></div>
+                <div class="proyecto"><p><span class="nombre-proyecto">Servidor de contraseñas con Vaultwarden</span></p></div>
+                <div class="proyecto"><p><span class="nombre-proyecto">Monitorización de red con Zabbix</span></p></div>
             </section>
-        </section>
+
+
     </main>
 
     <footer>
@@ -79,6 +92,7 @@
 
             items.forEach(p => {
                 const texto = p.textContent.toLowerCase();
+                // Mostrar solo si el texto contiene la búsqueda
                 if (texto.includes(q) || q === "") {
                     p.style.display = "";
                 } else {
