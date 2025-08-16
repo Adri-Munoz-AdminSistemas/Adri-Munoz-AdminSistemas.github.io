@@ -14,37 +14,12 @@
         function googleTranslateElementInit() {
             new google.translate.TranslateElement({
                 pageLanguage: 'es', // Idioma original de la página
-                includedLanguages: 'en', // Idiomas disponibles para traducir
+                includedLanguages: 'es,en', // Idiomas disponibles para traducir
                 layout: google.translate.TranslateElement.InlineLayout.SIMPLE
             }, 'google_translate_element');
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-    <style>
-        /* Mueve el selector a la parte superior izquierda */
-        #google_translate_element {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-        }
-
-        /* Cambiar el texto del selector a "Select Idiom" */
-        .goog-te-combo {
-            font-size: 16px;
-            text-align: left;
-        }
-
-        /* Personalizar el botón del selector */
-        .goog-te-menu-value {
-            color: black !important; /* Cambia el color del texto */
-        }
-
-        /* Cambiar el texto del combo al idioma inglés */
-        .goog-te-combo option[value="en"] {
-            display: none;
-        }
-    </style>
 </head>
 
 <body>
@@ -59,6 +34,12 @@
 
         <!-- Google Translate widget en la parte superior izquierda -->
         <div id="google_translate_element"></div>
+
+        <!-- Botones para cambiar idioma -->
+        <div id="idioma-selector">
+            <button id="espanol-btn" onclick="cambiarIdioma('es')">Español</button>
+            <button id="ingles-btn" onclick="cambiarIdioma('en')">Inglés</button>
+        </div>
 
         <div class="wave" style="height: 150px; overflow: hidden;">
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
@@ -117,10 +98,18 @@
 
     <!-- Función de JavaScript para traducir -->
     <script type="text/javascript">
-        function translatePage() {
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+
+        function cambiarIdioma(idioma) {
             var select = document.querySelector("select.goog-te-combo");
-            select.value = "en"; // Establece el idioma a inglés
-            select.dispatchEvent(new Event('change')); // Desencadena el cambio del idioma
+            select.value = idioma; // Establecer el idioma según el botón presionado
+            select.dispatchEvent(new Event('change')); // Disparar el cambio del idioma
         }
     </script>
 </body>
