@@ -298,28 +298,29 @@ footer{
 }
 
 /* Estilos de distribución de proyectos */
-.galeria-port {
+#proyectos {
     display: flex;
     flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-between;
 }
 
-.imagen-port {
-    width: 48%; /* 2 por fila */
+.proyecto {
+    width: calc(50% - 10px); /* 2 por línea */
     margin-bottom: 10px;
 }
 
-.imagen-port:nth-child(4n+1) {
-    margin-left: 0;
+.proyecto:nth-child(odd) {
+    margin-right: 0; /* El proyecto impar no tiene margen derecho */
 }
 
-.imagen-port:nth-child(4n) {
-    margin-right: 0;
+.proyecto:nth-child(even) {
+    margin-left: 0; /* El proyecto par no tiene margen izquierdo */
 }
 
-/* Si hay 5 proyectos, el último se centrará */
-.galeria-port > .imagen-port:nth-child(5) {
-    margin: 0 auto;
+/* Si hay un número impar de proyectos, centrar el último */
+#proyectos > .proyecto:nth-last-child(1) {
+    margin: 0 auto; /* Centrar el proyecto */
 }
 
 /* Responsividad */
