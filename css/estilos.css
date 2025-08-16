@@ -450,12 +450,11 @@ footer{
 /* Contenedor de los iconos */
 .contact-icons {
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Centra los iconos horizontalmente */
+    align-items: center; /* Centra los iconos verticalmente */
     gap: 20px;
     margin-top: 20px;
-    flex-wrap: wrap;
-    align-items: center;
-    height: 100vh; /* Asegura que los iconos estén centrados verticalmente */
+    height: 100vh; /* Asegura que los iconos estén centrados en toda la altura de la pantalla */
 }
 
 /* Estilo de los iconos */
@@ -465,6 +464,8 @@ footer{
     height: 50px; /* Tamaño de los iconos */
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 50%; /* Hace que el fondo del icono sea redondeado */
+    overflow: hidden; /* Para asegurarse de que no se salga nada del borde redondeado */
 }
 
 /* Efectos al pasar el ratón */
@@ -475,21 +476,20 @@ footer{
 
 /* Estilo de las imágenes dentro de los iconos */
 .contact-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Asegura que la imagen se ajuste sin distorsionarse */
+    width: 50px; /* Hace que la imagen tenga 50px de ancho */
+    height: 50px; /* Hace que la imagen tenga 50px de alto */
+    object-fit: cover; /* Mantiene la imagen centrada sin distorsionarse */
 }
 
 /* Estilos para el icono de Instagram */
 .contact-icon.instagram {
     background-color: #E4405F; /* Color característico de Instagram */
-    border-radius: 50%; /* Hace que el fondo sea redondeado */
 }
 
 /* Estilos para el icono de Gmail */
 .contact-icon.gmail {
     background-color: #DB4437; /* Color característico de Gmail */
-    border-radius: 50%; /* Hace que el fondo sea redondeado */
 }
+
 
 }
