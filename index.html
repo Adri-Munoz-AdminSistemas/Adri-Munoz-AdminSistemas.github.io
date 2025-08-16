@@ -20,6 +20,31 @@
         }
     </script>
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <style>
+        /* Mueve el selector a la parte superior izquierda */
+        #google_translate_element {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        /* Cambiar el texto del selector a "Select Idiom" */
+        .goog-te-combo {
+            font-size: 16px;
+            text-align: left;
+        }
+
+        /* Personalizar el botón del selector */
+        .goog-te-menu-value {
+            color: black !important; /* Cambia el color del texto */
+        }
+
+        /* Cambiar el texto del combo al idioma inglés */
+        .goog-te-combo option[value="en"] {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -31,8 +56,10 @@
             <h1>Bienvenido a mi Portfolio</h1>
             <h2>Adrián Muñoz</h2>
         </section>
-        <!-- Google Translate widget -->
-        <div id="google_translate_element" style="position: absolute; top: 10px; right: 10px;"></div>
+
+        <!-- Google Translate widget en la parte superior izquierda -->
+        <div id="google_translate_element"></div>
+
         <div class="wave" style="height: 150px; overflow: hidden;">
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
                 <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>

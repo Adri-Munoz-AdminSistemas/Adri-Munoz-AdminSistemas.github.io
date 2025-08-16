@@ -488,3 +488,21 @@ footer {
 .contact-icon.telegram {
     background-color: #0088CC; /* Color característico de Telegram */
 }
+
+/* Estilo del botón de Google */
+.contact-icon.google {
+    background-color: #4285F4; /* Color característico de Google */
+}
+
+/* Efectos al pasar el ratón sobre el botón de Google */
+.contact-icon.google:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Imagen dentro del icono de Google */
+.contact-icon.google img {
+    width: 50px; /* Hace que la imagen tenga 50px de ancho */
+    height: 50px; /* Hace que la imagen tenga 50px de alto */
+    object-fit: cover; /* Mantiene la imagen centrada sin distorsionarse */
+}
