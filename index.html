@@ -7,7 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Portfolio Adrián Muñoz</title>
     <link rel="stylesheet" href="css/estilos.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+    
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es', // Idioma original de la página
+                includedLanguages: 'en', // Idiomas disponibles para traducir
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
@@ -19,15 +31,19 @@
             <h1>Bienvenido a mi Portfolio</h1>
             <h2>Adrián Muñoz</h2>
         </section>
-        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
-                style="height: 100%; width: 100%;">
-                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #fff;"></path>
-            </svg></div>
+        <!-- Botón para traducir al inglés -->
+        <button onclick="translatePage()">Traducir al Inglés</button>
+        <div id="google_translate_element" style="display:none;"></div>
+        <div class="wave" style="height: 150px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #fff;"></path>
+            </svg>
+        </div>
     </header>
+
     <main>
         <section class="contenedor sobre-nosotros">
-            <h2 class="titulo">Sobre mí</h2>
+            <h2 class="titulo">Formación</h2>
             <h3></h3>
             <div class="contenedor-sobre-nosotros">
                 <img src="img/ilustracion2.svg" alt="" class="imagen-about-us">
@@ -48,6 +64,7 @@
                 </div>
             </div>
         </section>
+    </main>
 
     <footer>
         <div class="contenedor-footer">
@@ -72,6 +89,15 @@
         </div>
         <h2 class="titulo-final">Adrián Muñoz</h2>
     </footer>
+
+    <!-- Función de JavaScript para traducir -->
+    <script type="text/javascript">
+        function translatePage() {
+            var select = document.querySelector("select.goog-te-combo");
+            select.value = "en"; // Establece el idioma a inglés
+            select.dispatchEvent(new Event('change')); // Desencadena el cambio del idioma
+        }
+    </script>
 </body>
 
 </html>
