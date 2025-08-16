@@ -446,4 +446,35 @@ footer{
     .titulo-final{
         font-size: 20px;
     }
+
+/* Contenedor de los iconos */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Estilo de los iconos */
+.contact-icon {
+    font-size: 30px;
+    color: #642a73;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Efectos al pasar el ratón */
+.contact-icon:hover {
+    color: #00BFFF; /* Azul claro al pasar el ratón */
+    transform: scale(1.1);
+}
+
+/* Estilos para el icono de Instagram */
+.contact-icon.instagram {
+    color: #E4405F; /* Color característico de Instagram */
+}
+
+/* Estilos para el icono de Gmail */
+.contact-icon.gmail {
+    color: #DB4437; /* Color característico de Gmail */
+}
 }
