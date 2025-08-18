@@ -28,12 +28,29 @@
         }
         .search-bar input:focus { border-color: #642a73; }
     </style>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'es',
+                includedLanguages: 'es,en',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
     <header>
         <nav>
-            <a href="index.html">Inicio</a>
+            <div class="nav-left">
+                <div id="google_translate_element"></div>
+            </div>
+            <div class="nav-right">
+                <a href="index.html">Inicio</a>
+            </div>
         </nav>
 
         <section class="textos-header">
