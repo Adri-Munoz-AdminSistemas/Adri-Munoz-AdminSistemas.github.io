@@ -575,7 +575,7 @@ nav {
     padding: 20px;
     margin: 10px;
     border-radius: 10px;  /* Esquinas redondeadas */
-    color: #fff;  /* Texto blanco para resaltar */
+    color: #fff;  /* Texto blanco */
 }
 
 /* Estilo para las filas de proyectos (si quieres algo más neutro en los separadores) */
@@ -592,7 +592,8 @@ nav {
     padding: 20px;
     margin: 10px;
     border-radius: 10px;
-    color: #333;  /* Texto oscuro para el rosa */
+    color: #fff;  /* Texto blanco */
 }
+
 
 
