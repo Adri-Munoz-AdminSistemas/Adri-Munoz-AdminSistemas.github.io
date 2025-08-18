@@ -568,31 +568,31 @@ nav {
     gap: 20px; /* Espacio entre las filas de proyectos */
 }
 
+/* Estilo para los proyectos dentro del contenedor */
+.proyecto {
+    background-color: #1E90FF;  /* Azul eléctrico */
+    border: 3px solid #FF7F50;  /* Borde color papaya */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;  /* Esquinas redondeadas */
+    color: #fff;  /* Texto blanco para resaltar */
+}
+
+/* Estilo para las filas de proyectos (si quieres algo más neutro en los separadores) */
 .proyectos-fila {
     display: flex;
-    justify-content: space-between; /* Espacio igual entre las columnas */
-    gap: 20px; /* Espacio entre los proyectos en una misma fila */
+    justify-content: space-between;
+    margin-bottom: 20px;
 }
 
-.proyecto {
-    flex: 1; /* Cada div de proyecto ocupará el mismo espacio */
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 8px;
+/* Si quieres el color rosa de fondo para algún proyecto específico, por ejemplo */
+.proyecto-rosa {
+    background-color: #FFC0CB;  /* Rosa suave */
+    border: 3px solid #FF7F50;  /* Borde color papaya */
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: #333;  /* Texto oscuro para el rosa */
 }
 
-.nombre-proyecto {
-    text-decoration: none;
-    color: #333;
-    font-weight: 600;
-    font-size: 18px;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e1e1e1;
-}
-
-.nombre-proyecto:hover {
-    background-color: #ddd;
-}
 
