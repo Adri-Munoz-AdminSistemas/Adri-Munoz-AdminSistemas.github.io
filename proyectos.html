@@ -5,73 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Portfolio Adrián Muñoz</title>
+    <title>Portfolio Adrián Muñoz - Proyectos</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
-    <style>
-        /* Navbar */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-            background: #642a73; /* fondo de navbar */
-        }
-
-        .nav-left,
-        .nav-right {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-right a {
-            color: #fff;
-            font-weight: 300;
-            text-decoration: none;
-            margin-left: 15px;
-        }
-
-        .nav-right a:hover {
-            text-decoration: underline;
-        }
-
-        /* Botón Google Translate */
-        #google_translate_element select {
-            padding: 5px 10px;
-            border-radius: 5px;
-            border: none;
-            background: #fff;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        /* Asegura que el resaltado se vea aunque no esté en tu CSS externo */
-        .highlight {
-            background: yellow;
-            color: #000;
-            font-weight: bold;
-        }
-
-        /* Barra de búsqueda */
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0 10px;
-        }
-
-        .search-bar input {
-            border: 2px solid #ccc;
-            padding: 8px 12px;
-            border-radius: 20px;
-            width: 320px;
-            font-size: 14px;
-            outline: none;
-        }
-
-        .search-bar input:focus {
-            border-color: #642a73;
-        }
-    </style>
 
     <!-- Google Translate Script -->
     <script type="text/javascript">
@@ -83,8 +19,7 @@
             }, 'google_translate_element');
         }
     </script>
-    <script type="text/javascript"
-        src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
@@ -101,10 +36,10 @@
         <section class="textos-header">
             <h1>Proyectos</h1>
         </section>
-        <div class="wave" style="height: 150px; overflow: hidden;">
-            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                    style="stroke: none; fill: #fff;"></path>
+
+        <div class="wave">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"></path>
             </svg>
         </div>
     </header>
@@ -117,7 +52,6 @@
             <form class="search-bar" onsubmit="return false;">
                 <input type="text" id="searchInput" placeholder="Buscar proyecto...">
             </form>
-            <br>
 
             <section id="proyectos" class="contenedor-proyectos">
                 <div class="proyecto">
@@ -167,7 +101,6 @@
 
             input.addEventListener('input', () => {
                 const q = input.value.trim().toLowerCase();
-
                 items.forEach(p => {
                     const texto = p.textContent.toLowerCase();
                     p.style.display = texto.includes(q) || q === "" ? "" : "none";
