@@ -506,3 +506,32 @@ footer {
     height: 50px; /* Hace que la imagen tenga 50px de alto */
     object-fit: cover; /* Mantiene la imagen centrada sin distorsionarse */
 }
+
+
+/* Contenedor de navegación dividido */
+nav {
+    display: flex;
+    justify-content: space-between; /* izquierda y derecha */
+    align-items: center;
+    padding: 30px 50px 0 50px;
+}
+
+/* Elementos alineados a la izquierda (traductor) */
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* separación entre elementos */
+}
+
+/* Elementos alineados a la derecha (links normales) */
+.nav-right a {
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.nav-right a:hover {
+    text-decoration: underline;
+}
+
