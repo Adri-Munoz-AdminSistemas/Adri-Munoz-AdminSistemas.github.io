@@ -508,22 +508,26 @@ footer {
 }
 
 
-/* Contenedor de navegación dividido */
+/* Navegación con distribucion izquierda-derecha */
 nav {
     display: flex;
-    justify-content: space-between; /* izquierda y derecha */
+    justify-content: space-between; /* separa izquierda y derecha */
     align-items: center;
     padding: 30px 50px 0 50px;
 }
 
-/* Elementos alineados a la izquierda (traductor) */
+/* Lado izquierdo (traductor) */
 .nav-left {
     display: flex;
     align-items: center;
-    gap: 15px; /* separación entre elementos */
 }
 
-/* Elementos alineados a la derecha (links normales) */
+/* Lado derecho (enlaces) */
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
 .nav-right a {
     color: #fff;
     font-weight: 300;
